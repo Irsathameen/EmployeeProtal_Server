@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "CMp3zTZcRWNPMemRvgut0jEplNueqI8XugZ8YZM41Gd1DSFEu4Gayq5xooAGGDR/w80KK4K2LAj1fr5zUpUEpg==",
+  "success": true,
+  "projectFilePath": "D:\\workingout\\Angular_18\\EmployeePortal_Server\\EmployeePortal\\EmployeePortal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\irsat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\irsat\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\irsat\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\irsat\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\irsat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\irsat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
