@@ -11,7 +11,7 @@ namespace EmployeePortal.Controllers
         public ActionResult<string> ValidateUsers()
         {
 
-            return "Success";
+            return "Success-1";
         }
 
     }
