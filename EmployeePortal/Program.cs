@@ -124,6 +124,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 //app.UseIpRateLimiting();
+// Add .NET JWT authentication middleware
 app.UseAuthentication();
 
 app.UseAuthorization();

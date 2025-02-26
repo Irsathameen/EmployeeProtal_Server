@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePortal", "EmployeePortal.csproj", "{B1E8983E-BC2E-4925-BB0A-E39192DB63A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePortal", "EmployeePortal.csproj", "{B1E8983E-BC2E-4925-BB0A-E39192DB63A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePortal.Data", "..\EmployeePortal.Data\EmployeePortal.Data.csproj", "{925A6E5E-FF3A-4E4E-9994-C0EBFCEF4AAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePortal.Data", "..\EmployeePortal.Data\EmployeePortal.Data.csproj", "{925A6E5E-FF3A-4E4E-9994-C0EBFCEF4AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.Test", "..\Employee.Test\Employee.Test.csproj", "{882BFB48-E22B-49F6-A9CD-4EB423F95E9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{925A6E5E-FF3A-4E4E-9994-C0EBFCEF4AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{925A6E5E-FF3A-4E4E-9994-C0EBFCEF4AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{925A6E5E-FF3A-4E4E-9994-C0EBFCEF4AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{882BFB48-E22B-49F6-A9CD-4EB423F95E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882BFB48-E22B-49F6-A9CD-4EB423F95E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882BFB48-E22B-49F6-A9CD-4EB423F95E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882BFB48-E22B-49F6-A9CD-4EB423F95E9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

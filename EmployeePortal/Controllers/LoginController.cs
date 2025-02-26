@@ -27,12 +27,15 @@ namespace EmployeePortal.Controllers
         public readonly EmployeeContext _dbContext;
         private readonly IMemoryCache _cache;
 
-        public LoginController(ILoginRepository iLoginRepository, IConfiguration config, EmployeeContext dbContext, IMemoryCache cache)
-        {
-            _ILoginRepository = iLoginRepository;
-            _config = config;
-            _dbContext = dbContext;
-            _cache = cache;
+        //public LoginController(ILoginRepository iLoginRepository, IConfiguration config, EmployeeContext dbContext, IMemoryCache cache)
+        //{
+
+            public LoginController(ILoginRepository iLoginRepository)
+            {
+                _ILoginRepository = iLoginRepository;
+            //_config = config;
+            //_dbContext = dbContext;
+            //_cache = cache;
 
         }
         #endregion Constrctor
@@ -100,6 +103,30 @@ namespace EmployeePortal.Controllers
 
         }
 
+        [HttpGet]
+        [Route("GetUserRoles1")]
+        [MapToApiVersion("1.0")]
+        [ResponseCache(Duration = 60)]
+        public ActionResult GetUserRoles1()
+        {
+            Response result = new Response();
+            {
+                try
+                {
+                    return Ok(_ILoginRepository.GetUserRoles());
+
+                }
+                catch (Exception ex)
+                {
+                    result.StatusCode = 500;
+                    result.Message = ex.Message;
+
+                }
+                return NoContent();
+            }
+
+        }
+
         #endregion
 
         #region ValidateUsers
@@ -119,36 +146,36 @@ namespace EmployeePortal.Controllers
 
                 bool isExists = _ILoginRepository.CheckUsersExists(objUser);
 
-                if (isExists)
+                //if (isExists)
+                //{
+                //    var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+                //    var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+                //    var Sectoken = new JwtSecurityToken(_config["Jwt:Issuer"],
+                //      _config["Jwt:Issuer"],
+                //      null,
+                //      expires: DateTime.Now.AddMinutes(120),
+                //      signingCredentials: credentials);
+
+                //    var token = new JwtSecurityTokenHandler().WriteToken(Sectoken);
+
+                return new Response
                 {
-                    var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-                    var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+                    StatusCode = 200,
+                    Message = "success",
+                    Result = "www"
+                };
+            //}
 
-                    var Sectoken = new JwtSecurityToken(_config["Jwt:Issuer"],
-                      _config["Jwt:Issuer"],
-                      null,
-                      expires: DateTime.Now.AddMinutes(120),
-                      signingCredentials: credentials);
-
-                    var token = new JwtSecurityTokenHandler().WriteToken(Sectoken);
-
-                    return new Response
-                    {
-                        StatusCode = 200,
-                        Message = "success",
-                        Result = token
-                    };
-                }
-
-                else
-                {
-                    return new Response
-                    {
-                        StatusCode = 401,
-                        Message = "Invalid Username /Password",
-                        Result = ""
-                    };
-                }
+            //    else
+            //    {
+            //        return new Response
+            //        {
+            //            StatusCode = 401,
+            //            Message = "Invalid Username /Password",
+            //            Result = ""
+            //        };
+            //    }
             }
             catch (Exception ex)
             {

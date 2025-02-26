@@ -9,7 +9,11 @@ namespace EmployeePortal.Data.Interface
 {
     public interface ILoginRepository
     {
-        public List<User> GetUsers();
+         IEnumerable<User> GetUsers();
         public bool CheckUsersExists(User objUser);
+        User GetFirstUsers();
+        IEnumerable<UserRole> GetUserRoles();
+
+        bool SaveUsers(User user);
     }
 }
